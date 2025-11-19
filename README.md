@@ -97,3 +97,69 @@ Add IAM users & groups
 Set group membership
 Create admin accounts
 Join a Windows 10 client to the domain
+
+
+ 
+ 
+ 
+ 
+ 
+ 🧪 LAB 2A — Active Directory OU, Users & Groups Setup This lab builds a realistic corporate IAM structure inside Windows Server using Organizational Units (OUs), user accounts, and security groups. 
+ 
+ 🧠 Objective Build a functional Identity & Access Management (IAM) foundation by creating: - Custom Organizational Units - User accounts - Security groups - Group-based access assignments This mirrors real-world identity lifecycle processes in enterprise environments.
+ 
+ 🛠 Tools Used - Oracle VirtualBox - Windows Server 2022 - Active Directory Domain Services (AD DS) - Active Directory Users and Computers (ADUC) 
+ 
+ 🚀 LAB 2A — Step-by-Step Instructions 
+ **STEP 1 — Open ADUC** Inside DC01: 
+ 1. Click **Start**
+ 2. Type: ``` dsa.msc ``` 
+ 3. Press **Enter** to open **Active Directory Users and Computers** 📸 Screenshot: ADUC main screen 
+ 
+ **STEP 2 — Expand the Domain** Expand: ``` mylab.local ``` You should see: Builtin, Computers, Domain Controllers, Users, etc. 📸 Screenshot: Expanded domain tree 
+ 
+ **STEP 3 — Create Parent OU** 1. Right-click **mylab.local** 2. Select: ``` New → Organizational Unit ``` 3. Name it: ``` CYBERLABS ``` 📸 Screenshot: CYBERLABS OU created 
+ 
+ **STEP 4 — Create Sub-OUs** Right-click **CYBERLABS → New → Organizational Unit** Create the following OUs: ``` Accounts Computers Security Groups Admins Service Accounts 
+ ` 📸 Screenshot: Sub-OUs under CYBERLABS 
+ **STEP 5 — Create User Accounts** Navigate to: ``` CYBERLABS → Accounts ``` 
+ 
+ ➤ User 1: Lauren Johnson
+ 1. Right-click **Accounts** → New → User
+ 2. Enter:  First Name: Lauren Last Name: Johnson User logon name: lauren.johnson 
+ 3. Set password:  Cyberlab123! 
+ 4. Settings: - Uncheck: User must change password at next logon - Check: Password never expires
+ 5. Click **Finish** ---
+  
+ 7. ➤ User 2: Os Williams
+ 1. Repeat the same process: 
+ 2. First Name: Os Last Name: Williams User logon name: os.williams
+ 3. Password: Cyberlab123! 
+ 4. Settings: - Uncheck: User must change password at next logon - Check: Password never expires
+      📸 Screenshot: Lauren + Os in Accounts OU
+
+     **STEP 6 — Create Security Groups**
+ 1. Navigate to: ``` CYBERLABS → Security Groups ```
+ 2. Right-click → New → Group  Create the following groups: ``` Group Name: HR-Team Scope: Global Type: Security ``` ``` Group Name: IT-Admins Scope: Global Type: Security ``` ``` Group Name: All-Staff Scope: Global Type: Security
+ 📸 Screenshot: All groups created
+
+ **STEP 7 — Add Users to Groups** 
+ ➤ Add Lauren Johnson Add her to: ``` HR-Team All-Staff ``` Steps: 
+ 1. Double-click **Lauren Johnson**
+ 2.  Select **Member Of**
+ 3.   Click **Add**
+ 4.    Enter: ``` HR-Team All-Staff ```
+ 5. Click **Check Names → OK** 📸 Screenshot: Lauren’s Member Of tab
+  
+ ➤ Add Os Williams Add him to: ``` IT-Admins All-Staff ``` Steps: 
+ 1. Double-click **Os Williams**
+ 2. Member Of → Add
+ 3. Enter: ``` IT-Admins All-Staff ```
+ 4. Check Names → OK
+📸 Screenshot: Os’s Member Of tab
+
+ ✅ Validation Checklist Your Lab 2A is **Sucessfully complete** if: ✔ CYBERLABS parent OU exists ✔ Accounts, Computers, Security Groups, Admins, Service Accounts exist ✔ Users Lauren Johnson + Os Williams exist in Accounts ✔ Groups HR-Team, IT-Admins, All-Staff created ✔ Correct group membership assigned 
+ 📸 Optional Screenshot: Full OU tree expanded 
+ 
+ 🧠 Concept Notes (Short & Easy) Active Directory is the central identity directory for Windows environments.Organizational Units (OUs) help organize identities and apply policies.Custom OUs are best practice—never use default “Users” or “Computers. User accounts represent real employee identities. Security Groups enforce RBAC (Role-Based Access Control). Adding users to groups determines their access across systems. This lab simulates how IT and HR manage access in real organizations.  !!!END OF LAB 2A You now have a functional IAM structure ready for workstation domain joins, GPOs, and access control labs.
+
