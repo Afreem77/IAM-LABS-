@@ -114,14 +114,23 @@ Join a Windows 10 client to the domain
  **STEP 1 — Open ADUC** Inside DC01: 
  1. Click **Start**
  2. Type: ``` dsa.msc ``` 
- 3. Press **Enter** to open **Active Directory Users and Computers** 📸 Screenshot: ADUC main screen 
+ 3. Press **Enter** to open **Active Directory Users and Computers**
  
- **STEP 2 — Expand the Domain** Expand: ``` mylab.local ``` You should see: Builtin, Computers, Domain Controllers, Users, etc. 📸 Screenshot: Expanded domain tree 
+<img width="1036" height="852" alt="Screenshot 2025-11-18 194251" src="https://github.com/user-attachments/assets/caaa34d5-e76b-441c-8f7b-ba39edf4808b" />
+
+
  
- **STEP 3 — Create Parent OU** 1. Right-click **mylab.local** 2. Select: ``` New → Organizational Unit ``` 3. Name it: ``` CYBERLABS ``` 📸 Screenshot: CYBERLABS OU created 
+ **STEP 2 — Expand the Domain** Expand: ``` mylab.local ``` You should see: Builtin, Computers, Domain Controllers, Users, etc. 
+ <img width="1078" height="941" alt="Screenshot 2025-11-18 194339" src="https://github.com/user-attachments/assets/ec69ce05-691d-4eae-b490-3f57fe6541a8" />
+
+ **STEP 3 — Create Parent OU** 1. Right-click **mylab.local** 2. Select: ``` New → Organizational Unit ``` 3. Name it: ``` CYBERLABS 
+ 
+
  
  **STEP 4 — Create Sub-OUs** Right-click **CYBERLABS → New → Organizational Unit** Create the following OUs: ``` Accounts Computers Security Groups Admins Service Accounts 
- ` 📸 Screenshot: Sub-OUs under CYBERLABS 
+
+<img width="1082" height="881" alt="Screenshot 2025-11-18 225724" src="https://github.com/user-attachments/assets/2fdda47f-3fc5-4d15-8a1d-d82b63677900" />
+
  **STEP 5 — Create User Accounts** Navigate to: ``` CYBERLABS → Accounts ``` 
  
  ➤ User 1: Lauren Johnson
@@ -130,18 +139,21 @@ Join a Windows 10 client to the domain
  3. Set password:  Cyberlab123! 
  4. Settings: - Uncheck: User must change password at next logon - Check: Password never expires
  5. Click **Finish** ---
-  
+  <img width="1053" height="868" alt="Screenshot 2025-11-18 230026" src="https://github.com/user-attachments/assets/c8876276-6c17-4151-99bd-c0a775d0aeff" />
+
  7. ➤ User 2: Os Williams
  1. Repeat the same process: 
  2. First Name: Os Last Name: Williams User logon name: os.williams
  3. Password: Cyberlab123! 
  4. Settings: - Uncheck: User must change password at next logon - Check: Password never expires
-      📸 Screenshot: Lauren + Os in Accounts OU
+
+<img width="1064" height="892" alt="Screenshot 2025-11-18 230305" src="https://github.com/user-attachments/assets/e791caf0-f515-42a6-b527-f1f728d8bd9e" />
 
      **STEP 6 — Create Security Groups**
  1. Navigate to: ``` CYBERLABS → Security Groups ```
  2. Right-click → New → Group  Create the following groups: ``` Group Name: HR-Team Scope: Global Type: Security ``` ``` Group Name: IT-Admins Scope: Global Type: Security ``` ``` Group Name: All-Staff Scope: Global Type: Security
- 📸 Screenshot: All groups created
+ <img width="1065" height="892" alt="Screenshot 2025-11-18 230430" src="https://github.com/user-attachments/assets/333af807-e44f-4939-8f77-12aa1efa853a" />
+
 
  **STEP 7 — Add Users to Groups** 
  ➤ Add Lauren Johnson Add her to: ``` HR-Team All-Staff ``` Steps: 
@@ -149,7 +161,10 @@ Join a Windows 10 client to the domain
  2.  Select **Member Of**
  3.   Click **Add**
  4.    Enter: ``` HR-Team All-Staff ```
- 5. Click **Check Names → OK** 📸 Screenshot: Lauren’s Member Of tab
+ 5. Click **Check Names → OK**
+
+    <img width="1078" height="892" alt="Screenshot 2025-11-18 230631" src="https://github.com/user-attachments/assets/0732f185-55af-4a27-bdcb-b39e9dca2e99" />
+
   
  ➤ Add Os Williams Add him to: ``` IT-Admins All-Staff ``` Steps: 
  1. Double-click **Os Williams**
@@ -157,6 +172,7 @@ Join a Windows 10 client to the domain
  3. Enter: ``` IT-Admins All-Staff ```
  4. Check Names → OK
 📸 Screenshot: Os’s Member Of tab
+<img width="1081" height="907" alt="Screenshot 2025-11-18 230718" src="https://github.com/user-attachments/assets/21169773-8bbc-474f-ab64-b82551657743" />
 
  ✅ Validation Checklist Your Lab 2A is **Sucessfully complete** if: ✔ CYBERLABS parent OU exists ✔ Accounts, Computers, Security Groups, Admins, Service Accounts exist ✔ Users Lauren Johnson + Os Williams exist in Accounts ✔ Groups HR-Team, IT-Admins, All-Staff created ✔ Correct group membership assigned 
  📸 Optional Screenshot: Full OU tree expanded 
