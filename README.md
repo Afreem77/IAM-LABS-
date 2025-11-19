@@ -90,3 +90,10 @@ This repository showcases hands-on exercises I’ve completed while studying **I
  14.    🎉 LAB 1 — COMPLETED SUCCESSFULLY Accomplishments - 🖥 Windows Server VM created - 🌐 Static IP configured - 📡 Network connectivity verified - 🏰 AD DS installed - 👑 Server promoted to Domain Controller for **mylab.local** - 🧩 Environment ready for IAM & SC-300 labs --- # 🔜 Next Lab (Lab 2 Preview) - Create Organizational Units (OUs) - Add IAM users & groups - Set group membership - Create admin accounts - Prepare a Windows 10 client to join the domain
 
 🧠 Lab 1 — Concept Summary (1 Paragraph) In this lab I built the foundation of an IAM environment by creating a Windows Server 2022 virtual machine and promoting it to a Domain Controller. I used VirtualBox to simulate a real company network, installed Windows Server because it supports Active Directory Domain Services (AD DS), and configured a static IP so the DC is always reachable. I set DNS to the domain controller itself because Active Directory depends on DNS to find identity services. Bridged networking allowed the server to communicate like a real device on my home network. This created the core identity system (mylab.local) where all users, groups, permissions, and authentication will be managed in future labs.
+
+🔜 Next Up (Lab 2 Preview)
+Create OUs
+Add IAM users & groups
+Set group membership
+Create admin accounts
+Join a Windows 10 client to the domain
