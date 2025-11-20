@@ -207,11 +207,11 @@ Join a Windows 10 client to the domain
     <img width="1049" height="424" alt="Screenshot 2025-11-19 195836" src="https://github.com/user-attachments/assets/e2b28d18-332e-4da7-ab27-e307e13906f6" />
     
 
-    3️. Create OU_Employees - Right-click **mylab.local** - New → Organizational Unit - Name:  OU_Employees - Keep “Protect from accidental deletion” ✔ 
-    4️. Create Sub-OUs Under OU_Employees Right-click **OU_Employees** → New → Organizational Unit Create these:  OU_Admins OU_StandardUsers
-    5️. Create OU_Computers - Right-click **mylab.local** - New → Organizational Unit - Name:  OU_Computers  
-    6️. Create Sub-OUs Under OU_Computers Right-click **OU_Computers** → New → Organizational Unit Create:  OU_Workstations OU_Servers
-    7️. Create OU_Groups Used to manage IAM permissions at the group level. - Right-click **mylab.local** - New → Organizational Unit - Name:  OU_Groups 
+    3️. Create OU_Employees  Right-click **mylab.local**  New  Organizational Unit - Name:  OU_Employees  Keep “Protect from accidental deletion” ✔ 
+    4️. Create Sub-OUs Under OU_Employees Right-click **OU_Employees** New  Organizational Unit Create these:  OU_Admins OU_StandardUsers
+    5️. Create OU_Computers  Right-click **mylab.local**  New  Organizational Unit - Name:  OU_Computers  
+    6️. Create Sub-OUs Under OU_Computers Right-click **OU_Computers**  New  Organizational Unit Create:  OU_Workstations OU_Servers
+    7️. Create OU_Groups Used to manage IAM permissions at the group level.  Right-click **mylab.local**  New Organizational Unit Name:  OU_Groups 
     
     
     <img width="1036" height="892" alt="Screenshot 2025-11-19 193903" src="https://github.com/user-attachments/assets/ff13ac5e-955f-42fd-be51-725bcd3fd2c1" />
@@ -222,6 +222,6 @@ Join a Windows 10 client to the domain
    Naming Standards Applied 
    Structure Ready for Group Policies 
 
-    🧠 Concept Notes Identity & Access Management Takeaways: - Small businesses need **simplified OU design** to reduce support complexity - Separation between **admins and standard users** supports **least privilege** - Organizing servers separately enables **stricter security policies** - Keeping security groups in a **dedicated OU** supports clean RBAC - **Protection against deletion** prevents accidental outages in production AD - This OU model matches real-world MSP and small enterprise environments.
+    🧠 Concept Notes Identity & Access Management Takeaways:  Small businesses need **simplified OU design** to reduce support complexity  Separation between **admins and standard users** supports **least privilege**  Organizing servers separately enables **stricter security policies**  Keeping security groups in a **dedicated OU** supports clean RBAC **Protection against deletion** prevents accidental outages in production AD. This OU model matches real-world MSP and small enterprise environments.
    
   
