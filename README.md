@@ -195,6 +195,7 @@ Join a Windows 10 client to the domain
         -OU_Workstations
         -OU_Servers 
     -OU_Groups 
+    
     📌 Naming Standard: All custom OUs begin with **OU_** ➡ Helps identify objects managed by IAM team  
     🛠 Steps Performed:
     1. Open Active Directory Users and Computers (ADUC) - Start Menu → Search: **Active Directory Users and Computers** - Press Enter 
@@ -204,12 +205,14 @@ Join a Windows 10 client to the domain
     2️. Enable Advanced Features Required to manage additional directory object properties. - Top menu → **View → Advanced Features** 
 
     <img width="1049" height="424" alt="Screenshot 2025-11-19 195836" src="https://github.com/user-attachments/assets/e2b28d18-332e-4da7-ab27-e307e13906f6" />
+    
 
     3️. Create OU_Employees - Right-click **mylab.local** - New → Organizational Unit - Name:  OU_Employees - Keep “Protect from accidental deletion” ✔ 
     4️. Create Sub-OUs Under OU_Employees Right-click **OU_Employees** → New → Organizational Unit Create these:  OU_Admins OU_StandardUsers
     5️. Create OU_Computers - Right-click **mylab.local** - New → Organizational Unit - Name:  OU_Computers  
     6️. Create Sub-OUs Under OU_Computers Right-click **OU_Computers** → New → Organizational Unit Create:  OU_Workstations OU_Servers
     7️. Create OU_Groups Used to manage IAM permissions at the group level. - Right-click **mylab.local** - New → Organizational Unit - Name:  OU_Groups 
+    
     
     <img width="1036" height="892" alt="Screenshot 2025-11-19 193903" src="https://github.com/user-attachments/assets/ff13ac5e-955f-42fd-be51-725bcd3fd2c1" />
 
