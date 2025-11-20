@@ -197,9 +197,9 @@ Join a Windows 10 client to the domain
         -OU_Servers 
     -OU_Groups 
     
-    📌 Naming Standard: All custom OUs begin with **OU_** ➡ Helps identify objects managed by IAM team  
+📌 All custom OUs begin with OU_ to support naming standards and clean administration.
     🛠 Steps Performed:
-    1. Open Active Directory Users and Computers (ADUC) - Start Menu → Search: **Active Directory Users and Computers** - Press Enter 
+    1. Open Active Directory Users and Computers (ADUC) Start Menu Search: **Active Directory Users and Computers** Press Enter 
 
 <img width="1087" height="439" alt="Screenshot 2025-11-19 195641" src="https://github.com/user-attachments/assets/62d6d512-bd53-4c07-a53b-d55da54226dd" />
 
