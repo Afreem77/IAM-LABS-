@@ -247,7 +247,7 @@ Name: OU_Groups
 <img width="1036" height="892" alt="Screenshot 2025-11-19 193903" src="https://github.com/user-attachments/assets/2fd0219a-0f91-45bb-82f6-0fd8455f7d88" />
 
 
-     ✔ Validation checklist. Lab2B Successfully completed
+   ✔ Validation checklist Lab2B Successfully completed
    OU Structure Complete
    Advanced Features Enabled 
    Naming Standards Applied 
