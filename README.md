@@ -206,28 +206,39 @@ Join a Windows 10 client to the domain
     2️. Enable Advanced Features Required to manage additional directory object properties. - Top menu → **View → Advanced Features** 
 
     <img width="1049" height="424" alt="Screenshot 2025-11-19 195836" src="https://github.com/user-attachments/assets/e2b28d18-332e-4da7-ab27-e307e13906f6" />
-    
+  
 
-    3️. Create OU_Employees 
-    -Right-click **mylab.local** → New → Organizational Unit 
-    -Name: **OU_Employees** 
-    -nsure “Protect object from accidental deletion” is checked 
-    -Click OK 📸 Screenshot — OU_Employees created 
-    
-    4️. Create Sub-OUs in OU_Employees Inside **OU_Employees**: 
-    -OU_Admins 
-    -OU_StandardUsers (Each created via: Right-click OU → New → Organizational Unit) 
-    
-    5️.Create OU_Computers 
-    -Right-click **mylab.local** → New → Organizational Unit  
-    -Name: **OU_Computers**  
-    6️. Create Sub-OUs in OU_Computers Inside **OU_Computers**:  
-    -OU_Workstations 
-    -OU_Servers  
-    
-    7️. Create OU_Groups 1. Right-click **mylab.local** → New → Organizational Unit 2. Name: **OU_Groups** 📸 Screenshot — OU_Groups created 
-    
-    
+Step 3 — Create OU_Employees
+Right-click mylab.local
+Select New → Organizational Unit
+Name: OU_Employees
+Ensure Protect object from accidental deletion is checked
+Click OK
+
+Step 4 — Create Sub-OUs in OU_Employees
+Expand OU_Employees
+Right-click → New → Organizational Unit
+Create:
+OU_Admins
+OU_StandardUsers
+
+Step 5 — Create OU_Computers
+Right-click mylab.local
+Select New → Organizational Unit
+Name: OU_Computers
+
+Step 6 — Create Sub-OUs in OU_Computers
+Expand OU_Computers
+Right-click → New → Organizational Unit
+Create:
+OU_Workstations
+OU_Servers
+
+Step 7 — Create OU_Groups
+Right-click mylab.local
+Select New → Organizational Unit
+Name: OU_Groups
+
     <img width="1036" height="892" alt="Screenshot 2025-11-19 193903" src="https://github.com/user-attachments/assets/ff13ac5e-955f-42fd-be51-725bcd3fd2c1" />
 
      ✔ Validation Checklist Your Lab2B **Sucessfully completed** 
@@ -236,6 +247,4 @@ Join a Windows 10 client to the domain
    Naming Standards Applied 
    Structure Ready for Group Policies 
 
-    🧠 Concept Notes Identity & Access Management Takeaways:  Small businesses need **simplified OU design** to reduce support complexity  Separation between **admins and standard users** supports **least privilege**  Organizing servers separately enables **stricter security policies**  Keeping security groups in a **dedicated OU** supports clean RBAC **Protection against deletion** prevents accidental outages in production AD. This OU model matches real-world MSP and small enterprise environments.
-   
-  
+   🧠 Concept Notes (IAM Takeaways) Small businesses need simple, standardized OU structures  Separate admins and standard users for least privilege Servers and workstations need different GPO security settings Groups should live in their own OU to support RBAC  OU protection prevents major accidental outages 
