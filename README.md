@@ -91,7 +91,7 @@ This repository showcases hands-on exercises I’ve completed while studying **I
 
 🧠 Lab 1 — Concept Summary (1 Paragraph) In this lab I built the foundation of an IAM environment by creating a Windows Server 2022 virtual machine and promoting it to a Domain Controller. I used VirtualBox to simulate a real company network, installed Windows Server because it supports Active Directory Domain Services (AD DS), and configured a static IP so the DC is always reachable. I set DNS to the domain controller itself because Active Directory depends on DNS to find identity services. Bridged networking allowed the server to communicate like a real device on my home network. This created the core identity system (mylab.local) where all users, groups, permissions, and authentication will be managed in future labs.
 
-🔜 Next Up (Lab 2 Preview)
+🔜 Next Up (Lab 2A-D Preview)
 Create OUs
 Add IAM users & groups
 Set group membership
@@ -174,8 +174,51 @@ Join a Windows 10 client to the domain
 📸 Screenshot: Os’s Member Of tab
 <img width="1081" height="907" alt="Screenshot 2025-11-18 230718" src="https://github.com/user-attachments/assets/21169773-8bbc-474f-ab64-b82551657743" />
 
- ✅ Validation Checklist Your Lab 2A is **Sucessfully complete** if: ✔ CYBERLABS parent OU exists ✔ Accounts, Computers, Security Groups, Admins, Service Accounts exist ✔ Users Lauren Johnson + Os Williams exist in Accounts ✔ Groups HR-Team, IT-Admins, All-Staff created ✔ Correct group membership assigned 
+ ✅ Validation Checklist Your Lab 2A is **Sucessfully completed** if: ✔ CYBERLABS parent OU exists ✔ Accounts, Computers, Security Groups, Admins, Service Accounts exist ✔ Users Lauren Johnson + Os Williams exist in Accounts ✔ Groups HR-Team, IT-Admins, All-Staff created ✔ Correct group membership assigned 
  📸 Optional Screenshot: Full OU tree expanded 
  
  🧠 Concept Notes (Short & Easy) Active Directory is the central identity directory for Windows environments.Organizational Units (OUs) help organize identities and apply policies.Custom OUs are best practice—never use default “Users” or “Computers. User accounts represent real employee identities. Security Groups enforce RBAC (Role-Based Access Control). Adding users to groups determines their access across systems. This lab simulates how IT and HR manage access in real organizations.  !!!END OF LAB 2A You now have a functional IAM structure ready for workstation domain joins, GPOs, and access control labs.
 
+
+
+
+ # 🧪 Lab 2B — Small Business OU Structure **Domain:** mylab.local **Server:** DC01 — Windows Server 2022 
+ 
+ 🎯 Objective Design a simplified Active Directory structure appropriate for a small business environment. Ensures: - Easy management for small IT teams - Clean user identity separation - Basic workstation/server organization - Support for RBAC (Role-Based Access Control) 
+ 
+ 🧱 Final OU Structure 
+ mylab.local: 
+    -OU_Employees
+        -OU_Admins
+        -OU_StandardUsers 
+    -OU_Computers
+        -OU_Workstations
+        -OU_Servers 
+    -OU_Groups 
+    📌 Naming Standard: All custom OUs begin with **OU_** ➡ Helps identify objects managed by IAM team  
+    🛠 Steps Performed:
+    1. Open Active Directory Users and Computers (ADUC) - Start Menu → Search: **Active Directory Users and Computers** - Press Enter 
+
+<img width="1087" height="439" alt="Screenshot 2025-11-19 195641" src="https://github.com/user-attachments/assets/62d6d512-bd53-4c07-a53b-d55da54226dd" />
+
+    2️. Enable Advanced Features Required to manage additional directory object properties. - Top menu → **View → Advanced Features** 
+
+    <img width="1049" height="424" alt="Screenshot 2025-11-19 195836" src="https://github.com/user-attachments/assets/e2b28d18-332e-4da7-ab27-e307e13906f6" />
+
+    3️. Create OU_Employees - Right-click **mylab.local** - New → Organizational Unit - Name:  OU_Employees - Keep “Protect from accidental deletion” ✔ 
+    4️. Create Sub-OUs Under OU_Employees Right-click **OU_Employees** → New → Organizational Unit Create these:  OU_Admins OU_StandardUsers
+    5️. Create OU_Computers - Right-click **mylab.local** - New → Organizational Unit - Name:  OU_Computers  
+    6️. Create Sub-OUs Under OU_Computers Right-click **OU_Computers** → New → Organizational Unit Create:  OU_Workstations OU_Servers
+    7️. Create OU_Groups Used to manage IAM permissions at the group level. - Right-click **mylab.local** - New → Organizational Unit - Name:  OU_Groups 
+    
+    <img width="1036" height="892" alt="Screenshot 2025-11-19 193903" src="https://github.com/user-attachments/assets/ff13ac5e-955f-42fd-be51-725bcd3fd2c1" />
+
+     ✔ Validation Checklist Your Lab2B **Sucessfully completed** 
+   OU Structure Complete
+   Advanced Features Enabled 
+   Naming Standards Applied 
+   Structure Ready for Group Policies 
+
+    🧠 Concept Notes Identity & Access Management Takeaways: - Small businesses need **simplified OU design** to reduce support complexity - Separation between **admins and standard users** supports **least privilege** - Organizing servers separately enables **stricter security policies** - Keeping security groups in a **dedicated OU** supports clean RBAC - **Protection against deletion** prevents accidental outages in production AD - This OU model matches real-world MSP and small enterprise environments.
+   
+  
