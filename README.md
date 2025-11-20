@@ -186,6 +186,7 @@ Join a Windows 10 client to the domain
  
  🎯 Objective Design a simplified Active Directory structure appropriate for a small business environment. Ensures: - Easy management for small IT teams - Clean user identity separation - Basic workstation/server organization - Support for RBAC (Role-Based Access Control) 
  
+ 
  🧱 Final OU Structure 
  mylab.local: 
     -OU_Employees
