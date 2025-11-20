@@ -203,7 +203,9 @@ Join a Windows 10 client to the domain
 
 <img width="1087" height="439" alt="Screenshot 2025-11-19 195641" src="https://github.com/user-attachments/assets/62d6d512-bd53-4c07-a53b-d55da54226dd" />
 
-    2️. Enable Advanced Features Required to manage additional directory object properties. - Top menu → **View → Advanced Features** 
+
+    2️. Enable Advanced Features Required to manage additional directory object properties. Top menu **View Advanced Features** 
+    
 
     <img width="1049" height="424" alt="Screenshot 2025-11-19 195836" src="https://github.com/user-attachments/assets/e2b28d18-332e-4da7-ab27-e307e13906f6" />
   
@@ -239,7 +241,8 @@ Right-click mylab.local
 Select New → Organizational Unit
 Name: OU_Groups
 
-    <img width="1036" height="892" alt="Screenshot 2025-11-19 193903" src="https://github.com/user-attachments/assets/ff13ac5e-955f-42fd-be51-725bcd3fd2c1" />
+    <img width="1036" height="892" alt="Screenshot 2025-11-19 193903" src="https://github.com/user-attachments/assets/b415ee61-f32b-40f7-8d04-f33a267869f7" />
+
 
      ✔ Validation Checklist Your Lab2B **Sucessfully completed** 
    OU Structure Complete
